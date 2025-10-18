@@ -1,0 +1,45 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.shape{
+    height: 200px;
+    width: 200px;
+    border: 1px solid;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    transition: all ;
+    transition-duration: 0.5s;
+}
+.box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.shape:hover{
+    transform: scale(1.02);
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid;
+    background-color: aqua;
+    position: absolute;
+}

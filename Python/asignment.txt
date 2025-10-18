@@ -1,0 +1,12 @@
+Take the following input from the user and calculate the percentage of class attendence
+a) total no. of working days 
+b) total no. of days for absent
+after calculating the percentage show that if the percentage is less than 75, then the student will not be able to sit in the exam
+
+write a python program to take 3 sides of a triange as input and check whether it is an eqilateral, isoceles or scalene triangle.
+
+write a python program to take the no. of days from the user and calculate the charge for the library according to the following:
+    till 5days rs 2 per day
+    till 6-10 days 3perday
+    till 11-15 days rs 4 per day
+    afte 5 rs. perday

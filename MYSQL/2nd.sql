@@ -1,0 +1,1 @@
+SELECT id,gender, LOWER(name) as lower, CONCAT(LOWER(name),"5677") as username, LENGTH(name) AS name_len FROM users;

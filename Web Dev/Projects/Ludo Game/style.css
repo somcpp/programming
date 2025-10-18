@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+}
+.ludoContainer {
+    background-color: rgb(41, 7, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+    
+}
+#ludoBoard{
+    display: grid;
+    max-width: 500px;
+    max-height: 500px;
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+        'red-Board red-Board green-Path green-Board green-Board'
+        'red-Board red-Board green-Path green-Board green-Board'
+        'red-Path red-Path win-Zone yellow-Path yellow-Path'
+        'blue-Board blue-Board blue-Path yellow-Board yellow-Board'
+        'blue-Board blue-Board blue-Path yellow-Board yellow-Board';
+}
+/* board */
+#red-Board {
+    grid-area: red-Board;
+    background-color: red;
+}
+#yellow-Board {
+    grid-area: yellow-Board;
+    background-color: yellow;
+}
+#green-Board {
+    grid-area: green-Board;
+    background-color: rgb(19, 193, 19);
+}
+#blue-Board {
+    grid-area: blue-Board;
+    background-color: blue;
+}
+/* path */
+#green-Path {
+    grid-area: green-Path;
+    display: grid;
+}
+#red-Path {
+    grid-area: red-Path;
+    display: grid;
+}
+#yellow-Path {
+    grid-area: yellow-Path;
+    display: grid;
+}
+#blue-Path {
+    grid-area: blue-Path;
+    display: grid;
+}
+#win-Zone {
+    grid-area: win-Zone;
+}
+.verticalPath {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+.horizontalPath {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.board {
+    padding: 12px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board div{
+    width: 80%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.board div span {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    
+}
+#yellow-Board div span {
+    background-color: yellow;
+}
+#red-Board div span {
+    background-color: red;
+}
+#green-Board div span {
+    background-color: rgb(19, 193, 19);
+}
+#blue-Board div span {
+    background-color: blue;
+}
+
+.ludoBox{
+    border: 0.7px solid grey;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
