@@ -1,0 +1,35 @@
+class Solution {
+public:
+__int128 factorial(__int128 k){
+    __int128 x = 1;
+    for(__int128 i = 1 ; i<=k; i++){
+        x *= i;
+    }
+    return x;
+}
+__int128 comb(__int128 a , __int128 b){
+    __int128 x = factorial(a);
+    __int128 y = factorial(b);
+    __int128 o = a-b;
+    __int128 g = factorial(o);
+    __int128 z = x/(y*g);
+    return z;
+}
+    vector<vector<int>> generate(int numRows) {
+        int n = numRows;
+        vector< vector <int> > v;
+        for(__int128 i=1; i<=n; i++){
+            vector <int> a(i);
+            v.push_back(a);
+        }
+        
+        for(__int128 i = 0 ; i<n ; i++){
+             
+            for(__int128 j = 0; j<=i; j++){
+                
+               v[i][j] = comb(i,j);
+            }
+        }
+        return v;
+    }
+};
